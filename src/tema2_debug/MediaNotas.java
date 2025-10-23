@@ -7,11 +7,14 @@ public class MediaNotas {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int contador = 0;
+        int contador = 1;
         double suma = 0;
+        int numAlumnos;
 
-        System.out.print("Introduce el número de alumnos: ");
-        int numAlumnos = sc.nextInt();
+        do {
+        	System.out.print("Introduce el número de alumnos: ");
+        	numAlumnos = sc.nextInt();
+        }while (numAlumnos <=0);
 
         while (contador <= numAlumnos) {
             System.out.print("Introduce la nota del alumno " + contador + ": ");
@@ -30,7 +33,7 @@ public class MediaNotas {
         
 
         double media = suma / numAlumnos;
-        System.out.println("La media del grupo es: " + media);
+        System.out.printf("La media del grupo es: %.2f",media);
 
         sc.close();
     }
